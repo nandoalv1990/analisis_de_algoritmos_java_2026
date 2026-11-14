@@ -28,6 +28,7 @@ public class sintaxisbasica1 {
                 System.out.println("el numero "+numero+" No es primo.");
             }
         }
+        teclado.close();
     }
 
     // Funcion o metodo
@@ -38,5 +39,25 @@ public class sintaxisbasica1 {
             if (n % i == 0) return false;
         }
         return true;
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Hola guapo, salva a mi bebe...
+Me caes gordo*/
