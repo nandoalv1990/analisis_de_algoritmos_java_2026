@@ -26,25 +26,40 @@ public class arreglosymetodos {
         for (int i = 0; i < numeros.length; i++) {
             System.out.print("Elemento["+i+"]:");
             numeros[i] = teclado.nextInt();
-        }
-
-        System.out.println("Imprime los valores del arreglo");
-        for(int x = 0; x < numeros.length; x++){
-            System.out.println("Elementos en la posicion ["+x+"] ->\t"+numeros[x]);
-        }
+        } 
 
         int maximo = obtenerMaximo(numeros);
+        double promedio = calcularPromedio(numeros);
         System.out.println("El valor maximo es "+maximo);
+        System.out.println("El promedio del arreglo es "+promedio);
+        imprimirArreglo(numeros);
     }
 
-    public static int obtenerMaximo(int[] arr){
-            int max = arr[0];
+    public static int obtenerMaximo(int[] numeros){
+            int max = numeros[0];
             // Sintaxis de un For-Each
-            for (int num : arr){
+            for (int num : numeros){
                 if (num > max){
                     max = num;
                 }
             }
             return max;
         }
+    // 1. Metodo que calcule el promedio del arreglo
+    public static double calcularPromedio(int[] numeros){
+        int suma = 0;
+        for (int num : numeros){
+            // suma = suma + num;
+            suma += num;
+        }
+        return (double) suma / numeros.length;
+    }
+    // 2. Metodo que imprima todos los elementos del arreglo
+    public static void imprimirArreglo(int[] numeros){
+        System.out.println("Imprime los valores del arreglo");
+        for(int x = 0; x < numeros.length; x++){
+            System.out.println("Elementos en la posicion ["+x+"] ->\t"+numeros[x]);
+        }
+    }
+    // 3. Crear un metodo para llenar el arreglo
 }
